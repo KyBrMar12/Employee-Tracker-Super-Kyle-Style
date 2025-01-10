@@ -9,7 +9,7 @@ It also allows you to add a department, add a role, add an employee, and update 
 
 
 ## Demo Video(s)
-📽️-
+📽️- [Full Video demo of Employee Tracker](https://drive.google.com/file/d/1WbTs-4VQaHU2jjkq2VhXJD8-lvuxwVVb/view) - 10 minutes<br/>
 
 
 ## Table of Contents 📋 
