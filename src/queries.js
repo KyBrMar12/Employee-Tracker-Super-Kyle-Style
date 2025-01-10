@@ -87,5 +87,25 @@ module.exports = {
         [departmentId]
       ),
   
-    
+    // Delete a department
+    deleteDepartment: async (departmentId) =>
+      pool.query('DELETE FROM department WHERE id = $1', [departmentId]),
+  
+    // Delete a role
+    deleteRole: async (roleId) =>
+      pool.query('DELETE FROM role WHERE id = $1', [roleId]),
+  
+    // Delete an employee
+    deleteEmployee: async (employeeId) =>
+      pool.query('DELETE FROM employee WHERE id = $1', [employeeId]),
+  
+    // Get department budget
+    getDepartmentBudget: async (departmentId) =>
+      pool.query(
+        `SELECT SUM(role.salary) AS total_budget
+         FROM employee
+         JOIN role ON employee.role_id = role.id
+         WHERE role.department_id = $1`,
+        [departmentId]
+      ),
   };
